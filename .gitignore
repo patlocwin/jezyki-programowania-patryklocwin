@@ -1,0 +1,87 @@
+# Skompilowane pliki klas i archiwa
+*.class
+*.log
+*.ctxt
+
+# Archiwa (paczki wykonywalne / biblioteki)
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Wyjątki: wrappery narzędzi budujących (jeśli używane)
+!gradle/wrapper/gradle-wrapper.jar
+!.mvn/wrapper/maven-wrapper.jar
+
+# Logi błędów i zrzuty maszyny wirtualnej (JVM)
+hs_err_pid*
+replay_pid*
+
+# Katalogi wyjściowe budowania (Build outputs)
+bin/
+out/
+build/
+target/
+dist/
+
+# Narzędzia budujące: Gradle & Maven
+.gradle/
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.properties
+
+# Środowisko IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Środowisko Eclipse
+.metadata/
+.classpath
+.project
+.settings/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+
+# Środowisko Visual Studio Code
+.vscode/
+
+# Środowisko NetBeans
+nbproject/private/
+nbbuild/
+nbdist/
+.nb-gradle/
+
+# Środowisko BlueJ
+*.ctxt
+.bluej
+
+# Pliki tymczasowe i systemowe (macOS, Windows, Linux)
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+

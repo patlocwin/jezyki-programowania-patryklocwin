@@ -8,3 +8,8 @@
 
 ---
 *Repozytorium zawiera rozwiązania zadań laboratoryjnych.*
+
+### Spis laboratoriów
+| Laboratorium | Zadania |
+| :--- | :--- |
+| [Laboratorium 01](lab01/README.md) | [Zad 1](lab01/zadanie1/README.md), [Zad 2](lab01/zadanie2/README.md), [Zad 3](lab01/zadanie3/README.md) |

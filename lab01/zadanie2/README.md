@@ -6,5 +6,14 @@ Rozwiń zadanie, aby tym razem użyć niestandardowego komparatora, który sortu
 
 ## Uruchomienie
 Główna klasa programu to `lab01.zadanie2.Main`.
+
+Za pomocą Gradle (z katalogu głównego):
 ```bash
+./gradlew run-lab01-zadanie2
+```
+
+Bezpośrednio przez Java:
+```bash
+javac -d out lab01/zadanie2/*.java
+java -cp out lab01.zadanie2.Main
 ```

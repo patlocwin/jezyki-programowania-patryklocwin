@@ -1,0 +1,42 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'pl.pwr.jp'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['.']
+            exclude 'build/**', '.gradle/**', 'out/**', '.idea/**'
+        }
+    }
+}
+
+application {
+    mainClass = 'lab01.zadanie1.Main'
+}
+
+// Dynamiczne generowanie zadań uruchomieniowych dla każdego zadania:
+// np. ./gradlew run-lab01-zadanie1
+//     ./gradlew run-lab01-zadanie2
+fileTree('.').matching {
+    include 'lab*/zadanie*/Main.java'
+}.each { file ->
+    def relPath = rootDir.toPath().relativize(file.parentFile.toPath()).toString()
+    def taskName = "run-" + relPath.replace('/', '-')
+    def mainClassName = relPath.replace('/', '.') + ".Main"
+
+    tasks.register(taskName, JavaExec) {
+        group = 'application'
+        description = "Uruchamia ${mainClassName}"
+        classpath = sourceSets.main.runtimeClasspath
+        mainClass = mainClassName
+    }
+}

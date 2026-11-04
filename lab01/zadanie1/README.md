@@ -5,5 +5,14 @@ Zaimplementuj klasę reprezentującą użytkownika z polami takimi jak nazwa uż
 
 ## Uruchomienie
 Główna klasa programu to `lab01.zadanie1.Main`.
+
+Za pomocą Gradle (z katalogu głównego):
 ```bash
+./gradlew run-lab01-zadanie1
+```
+
+Bezpośrednio przez Java:
+```bash
+javac -d out lab01/zadanie1/*.java
+java -cp out lab01.zadanie1.Main
 ```

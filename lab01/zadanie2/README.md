@@ -1,4 +1,4 @@
-# Zadanie 9
+# Zadanie 9 z listy
 
 ## Treść zadania
 Stwórz klasę reprezentującą zwierzę z polami, takimi jak gatunek, wiek i waga. Napisz komparator, który sortuje zwierzęta najpierw według gatunku, a następnie według wieku. Stwórz listę zwierząt i posortuj ją za pomocą tego komparatora. Wyświetl posortowaną listę.

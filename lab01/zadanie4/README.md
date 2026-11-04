@@ -1,4 +1,4 @@
-# Zadanie 5
+# Zadanie 5 z listy
 
 ## Treść zadania
 Stwórz klasę reprezentującą zamówienie z polami, takimi jak numer zamówienia, data i kwota. Zaimplementuj interfejs Comparable, aby zamówienia były porównywane na podstawie daty. Stwórz listę zamówień i posortuj ją za pomocą Collections.sort(). Następnie wyświetl posortowaną listę.

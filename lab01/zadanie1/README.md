@@ -1,4 +1,4 @@
-# Zadanie 4
+# Zadanie 4 z listy
 
 ## Treść zadania
 Zaimplementuj klasę reprezentującą użytkownika z polami takimi jak nazwa użytkownika, adres e-mail i numer ID. Napisz metody equals() i hashCode(), aby porównywały użytkowników na podstawie numeru ID. Stwórz HashSet i dodaj kilku użytkowników o tym samym numerze ID oraz kilku różnych. Przeanalizuj wynik.

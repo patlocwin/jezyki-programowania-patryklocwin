@@ -18,17 +18,17 @@ public class ListBenchmark {
         List<Integer> arrayList = new ArrayList<>();
         List<Integer> linkedList = new LinkedList<>();
 
-        long timeArrayList = measureTimeNs(() -> {
-            for (Integer num : data) {
-                arrayList.add(num);
-            }
-        });
+        long startArrayList = System.nanoTime();
+        for (Integer num : data) {
+            arrayList.add(num);
+        }
+        long timeArrayList = System.nanoTime() - startArrayList;
 
-        long timeLinkedList = measureTimeNs(() -> {
-            for (Integer num : data) {
-                linkedList.add(num);
-            }
-        });
+        long startLinkedList = System.nanoTime();
+        for (Integer num : data) {
+            linkedList.add(num);
+        }
+        long timeLinkedList = System.nanoTime() - startLinkedList;
 
         printResult("Dodawanie na koniec listy", timeArrayList, timeLinkedList);
     }
@@ -37,17 +37,17 @@ public class ListBenchmark {
         List<Integer> arrayList = new ArrayList<>();
         List<Integer> linkedList = new LinkedList<>();
 
-        long timeArrayList = measureTimeNs(() -> {
-            for (int i = 0; i < operationsCount; i++) {
-                arrayList.add(0, i);
-            }
-        });
+        long startArrayList = System.nanoTime();
+        for (int i = 0; i < operationsCount; i++) {
+            arrayList.add(0, i);
+        }
+        long timeArrayList = System.nanoTime() - startArrayList;
 
-        long timeLinkedList = measureTimeNs(() -> {
-            for (int i = 0; i < operationsCount; i++) {
-                linkedList.add(0, i);
-            }
-        });
+        long startLinkedList = System.nanoTime();
+        for (int i = 0; i < operationsCount; i++) {
+            linkedList.add(0, i);
+        }
+        long timeLinkedList = System.nanoTime() - startLinkedList;
 
         printResult("Dodawanie na początek", timeArrayList, timeLinkedList);
     }
@@ -62,17 +62,17 @@ public class ListBenchmark {
             targets.add(random.nextInt(baseElementsCount));
         }
 
-        long timeArrayList = measureTimeNs(() -> {
-            for (Integer target : targets) {
-                arrayList.contains(target);
-            }
-        });
+        long startArrayList = System.nanoTime();
+        for (Integer target : targets) {
+            arrayList.contains(target);
+        }
+        long timeArrayList = System.nanoTime() - startArrayList;
 
-        long timeLinkedList = measureTimeNs(() -> {
-            for (Integer target : targets) {
-                linkedList.contains(target);
-            }
-        });
+        long startLinkedList = System.nanoTime();
+        for (Integer target : targets) {
+            linkedList.contains(target);
+        }
+        long timeLinkedList = System.nanoTime() - startLinkedList;
 
         printResult("Przeszukiwanie", timeArrayList, timeLinkedList);
     }
@@ -82,17 +82,17 @@ public class ListBenchmark {
         List<Integer> arrayList = new ArrayList<>(data);
         List<Integer> linkedList = new LinkedList<>(data);
 
-        long timeArrayList = measureTimeNs(() -> {
-            for (int i = 0; i < removeCount; i++) {
-                arrayList.remove(0);
-            }
-        });
+        long startArrayList = System.nanoTime();
+        for (int i = 0; i < removeCount; i++) {
+            arrayList.remove(0);
+        }
+        long timeArrayList = System.nanoTime() - startArrayList;
 
-        long timeLinkedList = measureTimeNs(() -> {
-            for (int i = 0; i < removeCount; i++) {
-                linkedList.remove(0);
-            }
-        });
+        long startLinkedList = System.nanoTime();
+        for (int i = 0; i < removeCount; i++) {
+            linkedList.remove(0);
+        }
+        long timeLinkedList = System.nanoTime() - startLinkedList;
 
         printResult("Usuwanie z początku", timeArrayList, timeLinkedList);
     }
@@ -103,12 +103,6 @@ public class ListBenchmark {
             numbers.add(random.nextInt());
         }
         return numbers;
-    }
-
-    private long measureTimeNs(Runnable task) {
-        long startTime = System.nanoTime();
-        task.run();
-        return System.nanoTime() - startTime;
     }
 
     private void printResult(String operationName, long arrayListNs, long linkedListNs) {

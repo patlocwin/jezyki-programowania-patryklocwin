@@ -1,6 +1,7 @@
-# Zadanie 3
+# Zadanie 6
 
 ## Treść zadania
+Zaimplementuj klasę reprezentującą samochód z polami takimi jak marka, model i numer rejestracyjny. Nadpisz metody equals() i hashCode(), aby porównywały samochody na podstawie numeru rejestracyjnego. Stwórz HashSet i dodaj kilka samochodów o tym samym numerze rejestracyjnym oraz kilka różnych. Przeanalizuj wynik.
 
 ## Uruchomienie
 Główna klasa programu to `lab01.zadanie3.Main`.

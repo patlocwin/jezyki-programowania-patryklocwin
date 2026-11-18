@@ -25,7 +25,6 @@ public class Animal {
 
     @Override
     public String toString() {
-        return String.format("Gatunek: %-7s | Wiek: %2d lat(a) | Waga: %6.1f kg",
-                species, age, weight);
+        return String.format("Gatunek: %s, Wiek: %d lat(a), Waga: %.1f kg", species, age, weight);
     }
 }

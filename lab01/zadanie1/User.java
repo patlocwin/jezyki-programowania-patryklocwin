@@ -26,16 +26,16 @@ public class User {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) {
+    public boolean equals(Object obj) {
+        if (this == obj) {
             return true;
         }
 
-        if (o == null || getClass() != o.getClass()) {
+        if (obj == null || getClass() != obj.getClass()) {
             return false;
         }
 
-        User user = (User) o;
+        User user = (User) obj;
         return Objects.equals(id, user.id);
     }
 
@@ -46,6 +46,6 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" + "id=" + id + ", username='" + username + '\'' + ", email='" + email + '\'' + '}';
+        return "User={" + "id=" + id + ", username='" + username + '\'' + ", email='" + email + '\'' + '}';
     }
 }

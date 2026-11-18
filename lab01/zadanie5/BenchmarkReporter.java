@@ -11,6 +11,6 @@ public class BenchmarkReporter {
         System.out.printf("Test: %s%n", result.getOperationName());
         System.out.printf("  - ArrayList:  %.2f ms%n", result.getArrayListTimeMs());
         System.out.printf("  - LinkedList: %.2f ms%n", result.getLinkedListTimeMs());
-        System.out.printf("%s (%.1fx szybciej)%n%n", result.getFasterListName(), result.getSpeedRatio());
+        System.out.printf("Wynik: %s (%.1fx szybciej)%n%n", result.getFasterListName(), result.getSpeedRatio());
     }
 }

@@ -14,17 +14,17 @@ public class Main {
         animals.add(new Animal("Kot", 1, 6.2));
         animals.add(new Animal("Papuga", 4, 1.4));
 
-        System.out.println("1. Lista początkowa");
+        System.out.println("Lista początkowa:");
         animals.forEach(System.out::println);
 
         Collections.sort(animals, new SpeciesThenAgeComparator());
 
-        System.out.println("\n2. Posortowane: gatunek (A-Z) -> wiek (rosnąco)");
+        System.out.println("\n2. Posortowane: gatunek (od A do Z, alfabetycznie), wiek (rosnąco):");
         animals.forEach(System.out::println);
 
         Collections.sort(animals, new WeightAscendingComparator());
 
-        System.out.println("\n3. Posortowane: waga (od najlżejszego do najcięższego)");
+        System.out.println("\n3. Posortowane: waga (od najlżejszego do najcięższego):");
         animals.forEach(System.out::println);
     }
 }

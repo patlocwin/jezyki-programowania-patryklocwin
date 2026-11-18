@@ -7,15 +7,15 @@ public class Main {
     public static void main(String[] args) {
         Set<User> users = new HashSet<>();
 
-        User user1 = new User(1L, "jan_k", "jan.kowalski@gmail.com");
-        User user2 = new User(1L, "jan_n", "jan.nowakowski@gmail.com");
-        User user3 = new User(2L, "anna_n", "anna.nowak@gmail.com");
-        User user4 = new User(3L, "piotr_z", "piotr.zielinski@gmail.com");
+        User user1 = new User(1L, "jan_kowalski", "jan.kowalski@gmail.com");
+        User user2 = new User(1L, "patryk_nowakowski", "jan.nowakowski@gmail.com");
+        User user3 = new User(2L, "anna_nowak", "anna.nowak@gmail.com");
+        User user4 = new User(3L, "piotr_zielinski", "piotr.zielinski@gmail.com");
 
-        System.out.println("Dodano user1 (ID: 1): " + users.add(user1));
-        System.out.println("Dodano user2 (ID: 1): " + users.add(user2));
-        System.out.println("Dodano user3 (ID: 2): " + users.add(user3));
-        System.out.println("Dodano user4 (ID: 3): " + users.add(user4));
+        System.out.println("Dodano uzytkownika nr 1 (ID: 1): " + users.add(user1));
+        System.out.println("Dodano uzytkownika nr 2  (ID: 1): " + users.add(user2));
+        System.out.println("Dodano uzytkownika nr 3  (ID: 2): " + users.add(user3));
+        System.out.println("Dodano uzytkownika nr 4  (ID: 3): " + users.add(user4));
 
         System.out.println("\nRozmiar zbioru: " + users.size());
 

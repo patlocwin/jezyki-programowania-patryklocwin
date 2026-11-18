@@ -16,11 +16,11 @@ public class BenchmarkResult {
     }
 
     public double getArrayListTimeMs() {
-        return arrayListTimeNs / 1_000_000.0;
+        return arrayListTimeNs / 1000000.0;
     }
 
     public double getLinkedListTimeMs() {
-        return linkedListTimeNs / 1_000_000.0;
+        return linkedListTimeNs / 1000000.0;
     }
 
     public String getFasterListName() {

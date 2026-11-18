@@ -12,8 +12,8 @@ public class Main {
         addSampleWords(treeMapDictionary);
 
         DictionaryPrinter printer = new DictionaryPrinter();
-        printer.print("HashMap (kolejność zależna od hashCode):", hashMapDictionary);
-        printer.print("TreeMap (kolejność alfabetyczna):", treeMapDictionary);
+        printer.print("HashMap (kolejność jest zależna od hashCode):", hashMapDictionary);
+        printer.print("TreeMap (kolejność jest alfabetyczna):", treeMapDictionary);
 
         System.out.println("Liczba słów w słowniku: " + treeMapDictionary.size());
         System.out.println("Definicja słowa 'kawa': " + treeMapDictionary.getDefinition("kawa"));

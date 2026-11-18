@@ -54,6 +54,6 @@ public class Order implements Comparable<Order> {
 
     @Override
     public String toString() {
-        return String.format("Zamówienie: %-10s | Data: %s | Kwota: %8.2f PLN", orderNumber, date, amount);
+        return String.format("Zamówienie: %s, Data: %s, Kwota: %.2f PLN", orderNumber, date, amount);
     }
 }

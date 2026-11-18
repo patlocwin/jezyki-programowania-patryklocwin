@@ -1,31 +1,31 @@
 package lab01.zadanie3;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.HashMap;
+import java.util.TreeMap;
 
 public class Main {
     public static void main(String[] args) {
-        Set<Car> cars = new HashSet<>();
+        Dictionary hashMapDictionary = new Dictionary(new HashMap<>());
+        Dictionary treeMapDictionary = new Dictionary(new TreeMap<>());
 
-        Car car1 = new Car("Toyota", "Yaris", "DXI3D7Z");
-        Car car2 = new Car("Ford", "Fiesta", "DXI3D7Z");
-        Car car3 = new Car("Toyota", "Yaris", "DXI3D7Z");
+        addSampleWords(hashMapDictionary);
+        addSampleWords(treeMapDictionary);
 
-        Car car4 = new Car("BMW", "X3", "KR87JK5");
-        Car car5 = new Car("Audi", "A7", "WPR98JE3");
+        DictionaryPrinter printer = new DictionaryPrinter();
+        printer.print("HashMap (kolejność zależna od hashCode):", hashMapDictionary);
+        printer.print("TreeMap (kolejność alfabetyczna):", treeMapDictionary);
 
-        System.out.println("Dodawanie aut do hashSet");
-        System.out.println("Dodawanie car1 (Toyota, DXI3D7Z): " + cars.add(car1));
-        System.out.println("Dodawanie car2 (Ford, DXI3D7Z):   " + cars.add(car2));
-        System.out.println("Dodawanie car3 (Toyota, DXI3D7Z): " + cars.add(car3));
-        System.out.println("Dodawanie car4 (BMW, KR87JK5):     " + cars.add(car4));
-        System.out.println("Dodawanie car5 (Audi, WPR98JE3):    " + cars.add(car5));
+        System.out.println("Liczba słów w słowniku: " + treeMapDictionary.size());
+        System.out.println("Definicja słowa 'kawa': " + treeMapDictionary.getDefinition("kawa"));
+    }
 
-        System.out.println("\nWszystkie auta w HashSet: " + cars.size());
-
-        System.out.println("\nAuta:");
-        for (Car car : cars) {
-            System.out.println(car);
-        }
+    private static void addSampleWords(Dictionary dictionary) {
+        dictionary.addWord("laptop", "podręczny przenośny komputer");
+        dictionary.addWord("kawa", "napój z ziaren kawowca");
+        dictionary.addWord("rower", "pojazd na dwóch kołach napędzany siłą nóg");
+        dictionary.addWord("zima", "pora roku po jesieni");
+        dictionary.addWord("plecak", "torba którą można założyć na plecy");
+        dictionary.addWord("telefon", "urządzenie do dzwonienia i pisania");
+        dictionary.addWord("egzamin", "sprawdzian wiedzy");
     }
 }

@@ -1,4 +1,4 @@
-# Zadanie 2 z listy
+# Zadanie 2 z listy (listy)
 
 ## Treść zadania
 Stwórz program, który generuje losowe liczby i dodaje je do listy typu ArrayList i LinkedList. Następnie przetestuj, jak długo trwa dodawanie, usuwanie i przeszukiwanie elementów w obu listach.

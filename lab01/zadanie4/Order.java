@@ -14,14 +14,6 @@ public class Order implements Comparable<Order> {
         this.amount = amount;
     }
 
-    public String getOrderNumber() {
-        return orderNumber;
-    }
-
-    public LocalDate getDate() {
-        return date;
-    }
-
     public double getAmount() {
         return amount;
     }
